@@ -92,7 +92,7 @@ let profesija = 'programuotojas';
 
 console.log (vardas + ' '+ pavarde + ' ' + `profesija yra ${profesija}`);
 
-//3 a) `indikuokite kintamąjį, skirtą išsaugoti vartotojo akių spalvą`
+//3 a) `indikuokite kintamąjį (let), skirtą išsaugoti vartotojo akių spalvą`
 
 const face = {eyeColor :"blue"};
 console.log (face.eyeColor);
@@ -122,8 +122,207 @@ console.log (person_info._user === user_Name);
 console.log(`Hello, ${user_Name}`);
 // console.log('Hello, '+ user_Name);
 
-
+console.log('---------------06.12.2022------------------');
 //06.12.2022
+
+// 1 variantas (atsakymas 13)
+
+console.log(+'35' + -"22");
+
+// 2 variantas
+console.log(Number('35') * Number ("22"));
+
+// 3 variantas
+
+console.log(+'558' > 22);
+
+// 4 variantas. Ar atspausdins 1, su šia sąlyga? Neatspausdins,nes usersCounter++ yra 0+1 = 1;
+
+let usersCounter = 0;
+let newUsers = usersCounter++;
+console.log(newUsers);
+
+// Kuris variantas teisingas?
+// 1 variantas Melas!, nes if sąlyga yra False.
+
+if(1==="1"){
+    console.log('Tiesa!');
+}
+    else{
+        console.log('Melas!');
+    }
+
+//2 variantas Tiesa!, nes sąlyga yra teisinga ir užeina į if bloką su Tiesa!
+
+    if(5=="5"){
+        console.log('Tiesa!');
+    }
+        else{
+            console.log('Melas!');
+        }
+
+//3 variantas Tiesa!, nes pirma sąlyga su 0 yra FALSE, o antra sąlyga yra " " (su tarpu tarp kabučių) yra True, todėl užeina ir gaunamas atsakymas Tiesa!
+
+if(0){
+    console.log('Melas!');
+}
+    else if (" "){
+        console.log('Tiesa!');
+    }
+
+//INCREMENTS ++x/--x ir x--/x++
+//1 variantas Atsakymas 11
+
+let x = 5;
+x += 2 + x++;
+x--;
+console.log(x);
+
+//2 variantas atsakymas 22
+
+let y = 20;
+y++;
+++y;
+console.log(y);
+
+//3 variantas atsakymas 13 . k = 6, nes ++k. z= 6 + (6+1) = 13.
+
+let k = 5;
+let z = 20;
+k = ++k;
+z = --z;
+z = k + ++k;
+console.log(z);
+
+console.log('-----------------------------------------');
+//Funkcijų kūrimas
+// 1 UŽDAVINYS - sukurti funkciją, kuriai būtų perduodamas vienas parametras skaičius, kuris padidinamas vienetu ir grąžnamas rezultatas. Atsakymas 1, 10, -1.
+
+function skaicius (sk){
+sk += 1;
+return sk;
+}
+console.log(skaicius(0));
+console.log(skaicius(9));
+console.log(skaicius(-2));
+
+console.log('-----------------------------------------');
+
+//2 UŽDAVINYS - Sukurti funkciją, kuriai būtų perduodamas vienas parametras skaičius (valandos) ir konvertuotų valandas į sekundes, bei grąžintų rezultatą. Atsakymas 7200, 36000, 86400.
+
+function laikas (val){
+    val = val * (60 ** 2);
+    return val;
+}
+console.log(laikas(2));
+console.log(laikas(10));
+console.log(laikas(24));
+
+console.log('-----------------------------------------');
+
+//3 UŽDAVINYS - Sukurti funkciją, kuri skaičiuotų krepšinio taškus, pirmas perduodamas parametras baudų skaičius, antras perduodamas parametras dvitaškių skaičius, trečias perduodamas tritaškių. Apskaičiuoti ir grąžinti bendrą surinktą komandos taškų skaičių. Atsakymas 6, 11.
+
+function lenta (one, two, three){
+one = one * 1;
+two = two * 2;
+three = three *3;
+return one + two + three;
+}
+console.log(lenta(1, 1, 1));
+console.log(lenta(2, 3, 1));
+
+console.log('-----------------------------------------');
+
+
+//4 UŽDAVINYS - parašykite funkciją, kuri apskaičiuotų trikampio plotą. Perduodami parametrai trikampio aukštinė (h) ir trikampio pagrindas (b). Funkcija grąžina trikampio plotą. Atsakymas 3, 500.
+
+function plotas (h, b){
+    return (h * b) / 2 ;
+}
+console.log(plotas(2,3));
+console.log(plotas(20,50));
+
+console.log('-----------------------------------------');
+
+//5 UŽDAVINYS - parašykite funkciją, kuriai būtų paduodami 2 parametrai, skaičiai, ir funkcija grąžintų TRUE jei dviejų skaičių suma yra mažiau arba lygu 100 ir false jei daugiau už 100.
+
+function tikrinimas (sk_1, sk_2){
+    let sk3 = sk_1 + sk_2;
+ if (sk3 <= 100) {
+    return 'True';
+ }else (sk3 > 100)
+ {return 'False';
+ }
+}
+ 
+console.log(tikrinimas(22,15));
+console.log(tikrinimas(83,34));
+console.log(tikrinimas(3,77));
+
+
+console.log('-----------------------------------------');
+
+//6 UŽDAVINYS - sukurti funkciją, kuri nustatytų ar du paduodami argumentai yra lygūs. Grąžiname true arba false.
+
+function palyginimas (x1, x2){
+if (x1 === x2){
+    return 'True';
+}else (x1 !== x2)
+{ return 'False';
+}
+}
+console.log(palyginimas(4, 8));
+console.log(palyginimas(2, 2));
+console.log(palyginimas(2, "2"));
+
+console.log('-----------------------------------------');
+
+//7 UŽDAVINYS - sukurkite funkciją, kuri paskaičiuotų bendrą ūkininko gyvulių kojų skaičių. Ūkininkas pateikia tris parametrus. Pirmas parametras vištų skaičius, antras - karvių skaičius, trečias - paršelių skaičius ūkyje. Funkcija grąžina bendrą kojų skaičių.
+
+function gyvuliai (vista, karve, kiaule){
+    vista = vista * 2;
+    karve = karve * 4;
+    kiaule = kiaule * 4;
+    return vista + karve + kiaule;
+}
+console.log(gyvuliai(2, 1, 1));
+
+console.log('-----------------------------------------');
+
+//8 UŽDAVINYS - sukurti funkciją, kuri nustatytų, kuris iš paduodamų parametrų (n1, n2) yra didesnis. Jei n1 didesnis grąžintų tekstą "n1 skaičius didesnis", jei n2 "n2 skaičius didesnis". Jei skaičiai lygūs grąžintų "n1 lygus n2".
+
+function compare (n1, n2){
+if(n1 > n2){
+    return `${n1} skaičius didesnis `;
+}else if(n1 < n2){
+    return `${n2} skaičius didesnis `;
+}else if(n1 == n2){
+    return `${n1} lygus ${n2} `;
+}
+}
+
+console.log(compare(3, 2));
+console.log(compare(2, 7));
+console.log(compare(8, 8));
+
+console.log('-----------------------------------------');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
