@@ -40,12 +40,12 @@ const block_width = 100;
 console.log (block_width);
 
 
-//6. (klausimas)
+//6. backstick kabutės ``
 
-{let userAge = 40;
-let userInfo = userAge;
+{let userAge = 36;
+let userInfo = `Vartotojo amžius: ${userAge}`;
 console.log (userInfo);
-}
+} 
 
 //7. INFINITY, o ne NaN
 let userHeight = 180 / 0 ;
@@ -56,19 +56,23 @@ console.log (userHeight);
 let userName;
 console.log (typeof userName);
 
-//9. (klausimas) nuėmiau kabutes
+//9. number
 
-let userSize = 45 / 8;
+let userSize = "45" / "8";
 console.log (typeof userSize);
 
 //1.1 a)
 
-let my_Age = 39; let height_me = 188; let foot_size = 44;
+let my_Age = 39; 
+let height_me = 188; 
+let foot_size = 44;
 
 console.log (my_Age, height_me, foot_size);
 //1.2 a)
 
-const _name = 'Tomas'; const _surname = 'Valancauskas'; let proffesion = "Programmer";
+const _name = 'Tomas'; 
+const _surname = 'Valancauskas'; 
+let proffesion = "Programmer";
 
 console.log (_name, _surname, proffesion);
 
@@ -82,13 +86,20 @@ console.log(vienas + du + trys);
 
 //2.2 a)
 
-const vardas = 'vardenis'; const pavarde = 'pavardenis'; let profesija = 'profesija yra programuotojas';
-console.log (vardas + ' '+ pavarde + ' ' + profesija);
+const vardas = 'vardenis'; 
+const pavarde = 'pavardenis'; 
+let profesija = 'programuotojas';
 
-//3 a)
+console.log (vardas + ' '+ pavarde + ' ' + `profesija yra ${profesija}`);
+
+//3 a) `indikuokite kintamąjį, skirtą išsaugoti vartotojo akių spalvą`
 
 const face = {eyeColor :"blue"};
 console.log (face.eyeColor);
+
+let eyeColor;
+
+eyeColor ="blue";
 
 //3 b)
 
@@ -104,11 +115,12 @@ console.log(user_Name);
 
 //3 d)
 
-console.log (person_info._user = user_Name);
+console.log (person_info._user === user_Name);
 
 //3 e)
 
-console.log('hello, '+ user_Name);
+console.log(`Hello, ${user_Name}`);
+// console.log('Hello, '+ user_Name);
 
 
 //06.12.2022
