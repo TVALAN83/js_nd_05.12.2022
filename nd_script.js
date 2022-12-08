@@ -122,7 +122,7 @@ console.log (person_info._user === user_Name);
 console.log(`Hello, ${user_Name}`);
 // console.log('Hello, '+ user_Name);
 
-console.log('---------------06.12.2022------------------');
+console.log('--------------------------------');
 //06.12.2022
 
 // 1 variantas (atsakymas 13)
